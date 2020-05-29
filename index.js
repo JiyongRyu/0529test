@@ -1,31 +1,23 @@
-const todos = [{
-    id: 3,
-    content: 'HTML',
-    completed: false
-  },
-  {
-    id: 2,
-    content: 'CSS',
-    completed: true
-  },
-  {
-    id: 1,
-    content: 'Javascript',
-    completed: false
-  }
-];
-
-const $test = document.querySelector(.test);
 function render() {
   let html = '';
-
+  const $test = document.querySelector('.test');
   todos.forEach(todo => {
-  $test.innerHTML = `<li id=${todo.id}><label><input type="checkbox" checked>${todo.content } <label></li>` });
 
+    $test.innerHTML += 
+    `<li id="${todo.id}">
+      <label><input type="checkbox" ${todo.completed ? 'checked' : ''}>${todo.content}</label>
+    </li>`;
+
+
+  });
+  const $ul = document.querySelector('.test');
+  $ul.innerHTML = html;
   return html;
 }
 
 console.log(render());
+const $btn = document.querySelector('button');
+$btn.onclick = render
 /*
 <li id="3">
   <label><input type="checkbox">HTML</label>
