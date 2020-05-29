@@ -1,7 +1,27 @@
-function render() {
-  let html = '';
-  const $test = document.querySelector('.test');
+const todos = [
+  {
+    id: 3,
+    content: 'HTML',
+    completed: false
+  },
+  {
+    id: 2,
+    content: 'CSS',
+    completed: true
+  },
+  {
+    id: 1,
+    content: 'Javascript',
+    completed: false
+  }
+]
+
+const $ul = document.querySelector('.test')
+function render () {
+  let html = ''
+
   todos.forEach(todo => {
+
 
     $test.innerHTML += 
     `<li id="${todo.id}">
@@ -18,6 +38,7 @@ function render() {
 console.log(render());
 const $btn = document.querySelector('button');
 $btn.onclick = render
+
 /*
 <li id="3">
   <label><input type="checkbox">HTML</label>
