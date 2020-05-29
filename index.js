@@ -15,12 +15,12 @@ const todos = [{
   }
 ];
 
+const $test = document.querySelector(.test);
 function render() {
   let html = '';
 
   todos.forEach(todo => {
-
-  });
+  $test.innerHTML = `<li id=${todo.id}><label><input type="checkbox" checked>${todo.content } <label></li>` });
 
   return html;
 }
