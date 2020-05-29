@@ -21,20 +21,24 @@ function render () {
   let html = ''
 
   todos.forEach(todo => {
-    html += `
-    <li id="${todo.id}">
-    <label><input type="checkbox" ${todo.completed ? 'checked' : ''}>${
-      todo.content
-    }</label>
-  </li>`
-  })
 
-  return html
+
+    $test.innerHTML += 
+    `<li id="${todo.id}">
+      <label><input type="checkbox" ${todo.completed ? 'checked' : ''}>${todo.content}</label>
+    </li>`;
+
+
+  });
+  const $ul = document.querySelector('.test');
+  $ul.innerHTML = html;
+  return html;
 }
 
-console.log(render())
+console.log(render());
+const $btn = document.querySelector('button');
+$btn.onclick = render
 
-$ul.innerHTML += render()
 /*
 <li id="3">
   <label><input type="checkbox">HTML</label>
