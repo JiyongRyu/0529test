@@ -8,6 +8,7 @@ function render() {
       <label><input type="checkbox" ${todo.completed ? 'checked' : ''}>${todo.content}</label>
     </li>`;
 
+
   });
   const $ul = document.querySelector('.test');
   $ul.innerHTML = html;
