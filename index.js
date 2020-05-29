@@ -21,6 +21,10 @@ function render () {
   let html = ''
 
   todos.forEach(todo => {
+    
+   html += `<li id="${todo.id}">
+   <label><input type="checkbox"${ todo.completed === true ? 'checked' : ''}>${todo.content}</label>
+ </li>`
 
 
 
