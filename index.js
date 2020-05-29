@@ -1,6 +1,3 @@
-
-console.log('hello world');
-
 const todos = [{
     id: 3,
     content: 'HTML',
@@ -18,12 +15,32 @@ const todos = [{
   }
 ];
 
-function todoContent() {
+
+
+function render() {
+  let html = '';
+  let $ul = document.querySelector('.test');
+
+const $ul = document.querySelector('.test')
+function render () {
+  let html = ''
+
+
+  console.log($ul);
   todos.forEach(todo => {
-      $ul.innerHTML += `<li id="${todo.id}"><label><input typ="checkbox">${todo.content}</label></li>`
-  })
-}
-todoContent();
+
+  });
+
+  $ul.innerHTML = html;
+
+  const $ul = document.querySelector('.test');
+  $ul.innerHTML = html;
+
+  return html;
+
+
+
+
 
 
 /*
