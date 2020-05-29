@@ -23,6 +23,7 @@ function render () {
   todos.forEach(todo => {
 
 
+
     $test.innerHTML += 
     `<li id="${todo.id}">
       <label><input type="checkbox" ${todo.completed ? 'checked' : ''}>${todo.content}</label>
@@ -32,6 +33,7 @@ function render () {
   });
   const $ul = document.querySelector('.test');
   $ul.innerHTML = html;
+
   return html;
 }
 
