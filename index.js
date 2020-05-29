@@ -15,14 +15,21 @@ const todos = [{
   }
 ];
 
+
 function render() {
   let html = '';
+  let $ul = document.querySelector('.test');
 
+  console.log($ul);
   todos.forEach(todo => {
+    todo = `
+    <li id="${todo.id}">
+      <label><input type="checkbox" ${todo.completed ? 'checked' : '' }>${todo.content}</label>
+    </li>`
 
+    return html += todo;
   });
-
-  return html;
+  $ul.innerHTML = html;
 }
 
 console.log(render());
